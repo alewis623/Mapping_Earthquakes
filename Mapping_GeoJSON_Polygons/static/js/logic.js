@@ -20,14 +20,14 @@ attribution: 'Map data © <a href="https://www.openstreetmap.org/">OpenStreetMap
 // Create a base layer that holds both maps.
 let baseMaps = {
   "Streets": streets,
-  "Satellite Streets": night
+  "Satellite Streets":satelliteStreets
 };
 
 // Create the map object with center, zoom level and default layer.
 let map = L.map('mapid', {
   center: [43.7, -79.3],
   zoom: 11,
-  layers: [satelliteStreets]
+  layers: [streets]
 })
 
 
@@ -40,12 +40,12 @@ let torontoHoods = "https://raw.githubusercontent.com/alewis623/Mapping_Earthqua
 
 // Create a style for the lines.
 let myStyle = {
-  color: "#ffffa1",
-  weight: 2
+  fillColor: "#ffffa1",
+  weight: 1
 }
 
 // Grabbing our GeoJSON data.
-d3.json(torontoData).then(function(data) {
+d3.json(torontoHoods).then(function(data) {
   console.log(data);
 
 // Creating a GeoJSON layer with the retrieved data.
@@ -53,7 +53,7 @@ L.geoJSON(data, {
   style: myStyle,
   onEachFeature: function(feature, layer) {
     console.log(layer);
-    layer.bindPopup("<h3>" + "Airline Code: " + feature.properties.airline + "</h3> <hr> <h3>"  + "Destination: "  + feature.properties.dst + "</h3>");
+    layer.bindPopup("<h3>" + "Neighborhood: " + feature.properties.AREA_NAME + "</h3>");
 }
 }).addTo(map);
 });
