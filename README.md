@@ -1,6 +1,7 @@
 # Mapping_Earthquakes
 ## Overview of the project
-This project was designed to show varius earthquake data derived from the USGS at https://earthquake.usgs.gov/ this site houses the data for the magnitude 4.5 or greater in the past week as well as the data for all earthquakes in the past 7 days (Project final date is December 20th for the images below). This project introduced leaflet and Mapbox.
+This project was designed to demonstrate Leaflet, working with GeoJSON's and Mapbox by presenting varius earthquake data derived from the USGS.  The USGS site is https://earthquake.usgs.gov/.  In the GeoJSON section we were able to pull the the data for the magnitude 4.5 or greater in the past week as well as the data for all earthquakes in the past 7 days (Project final date is December 20th for the images below). Tectonic plate data derived from https://github.com/fraxen/tectonicplates.
+
 
 ## Resources
 To build this project the following resources were used: VS Code version 1.62.3, Leaflet JS, Mapbox, Notepadd ++, v8.1.9, HTML, Chrome Browser verision 96.0.4664.45, JavaScript ES9, D3, and Bootstrap.
